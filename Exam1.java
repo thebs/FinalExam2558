@@ -1,16 +1,20 @@
 package FinalExam1;
 
-public class Foo implements Cal{
-    public void dip(int x, int n){
-        for(int i=x;i<=n;i+=x){
-            System.out.print(i + " ");
-        }
-        System.out.println();
+public class Exam1 {
+    public static void main(String[] args){
+        int n = 30;
+        Foo f = new Foo();
+        Boo b = new Boo();
+        System.out.println("=1=");
+        f.dip(3,n);
+        System.out.println("=2=");
+        b.dip(3,n);
+        System.out.println("=3=");
+        show(b,2,"abcde");
+        show(b,3,"123456789");
     }
-    public void calculate(int x, String s){
-        for(int i=x;i<=s.length();i+=x){
-            System.out.print(s.charAt(i-1));
-        }
-        System.out.println();
+    
+    public static void show(Cal m, int a, String s){
+        m.calculate(a,s);
     }
 }
